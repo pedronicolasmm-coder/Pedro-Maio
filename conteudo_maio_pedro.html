@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>44 Vídeos · @pedro_munaretto · Maio 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0C0C0A;
+  --bg2: #131310;
+  --bg3: #1A1A16;
+  --gold: #D4A843;
+  --gold2: #F0C060;
+  --cream: #F2EBD9;
+  --muted: #6B6456;
+  --red: #E04B2A;
+  --green: #4BAE6E;
+  --text: #E8E0CC;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 90% 50%, rgba(212,168,67,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 10% 80%, rgba(224,75,42,0.05) 0%, transparent 50%);
+}
+
+.hero-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-tag::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(72px, 12vw, 160px);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  color: var(--cream);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 8px;
+}
+
+.hero-title .accent { color: var(--gold); }
+
+.hero-sub {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: clamp(20px, 3vw, 32px);
+  color: var(--muted);
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  color: var(--cream);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.stat-num .s-accent { color: var(--gold); }
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 48px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* STRATEGY */
+.strategy {
+  padding: 80px 48px;
+  border-top: 1px solid rgba(212,168,67,0.1);
+  background: var(--bg2);
+}
+
+.section-eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 5vw, 56px);
+  color: var(--cream);
+  line-height: 1;
+  margin-bottom: 32px;
+  letter-spacing: 0.02em;
+}
+
+.section-title em {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  color: var(--gold);
+  font-size: 0.85em;
+}
+
+.strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: rgba(212,168,67,0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 32px;
+}
+
+.strat-card {
+  background: var(--bg2);
+  padding: 28px 24px;
+  transition: background 0.3s;
+}
+
+.strat-card:hover { background: var(--bg3); }
+
+.strat-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.strat-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  color: var(--cream);
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.strat-text {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.strat-text strong { color: var(--gold); }
+
+/* WEEK SECTIONS */
+.calendar {
+  padding: 0 48px 80px;
+}
+
+.week-block {
+  margin-top: 64px;
+}
+
+.week-header {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(212,168,67,0.12);
+}
+
+.week-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 64px;
+  color: rgba(212,168,67,0.15);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.week-info { flex: 1; }
+
+.week-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  color: var(--cream);
+  letter-spacing: 0.05em;
+}
+
+.week-dates {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.week-theme {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--gold);
+  text-align: right;
+}
+
+/* VIDEO CARDS */
+.day-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.video-card {
+  background: var(--bg2);
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 8px;
+  padding: 22px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: default;
+}
+
+.video-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.video-card:hover {
+  background: var(--bg3);
+  border-color: rgba(212,168,67,0.15);
+  transform: translateY(-1px);
+}
+
+.video-card:hover::before {
+  transform: scaleX(1);
+}
+
+.video-card.viral::before {
+  background: var(--red);
+}
+
+.video-card.viral {
+  border-color: rgba(224,75,42,0.12);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.card-day {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.card-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  color: rgba(212,168,67,0.2);
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.card-badges {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.badge-format { background: rgba(212,168,67,0.1); color: var(--gold); }
+.badge-viral { background: rgba(224,75,42,0.12); color: var(--red); }
+.badge-hook { background: rgba(75,174,110,0.1); color: var(--green); }
+
+.card-gancho {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--cream);
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.card-roteiro-label {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.card-roteiro {
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.card-roteiro strong { color: var(--text); font-weight: 500; }
+
+.card-cta {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+}
+
+.fire-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 14px;
+}
+
+/* FOOTER */
+.footer {
+  padding: 48px;
+  border-top: 1px solid rgba(212,168,67,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: gap;
+}
+
+.footer-brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+
+.footer-meta {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 768px) {
+  .hero, .strategy, .calendar { padding-left: 20px; padding-right: 20px; }
+  .day-row { grid-template-columns: 1fr; }
+  .strategy-grid { grid-template-columns: 1fr; }
+  .hero-stats { gap: 24px; }
+  .footer { flex-direction: column; gap: 12px; padding: 32px 20px; }
+}
+
+/* Progress bar */
+.progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--red));
+  z-index: 1000;
+  width: 0%;
+  transition: width 0.1s;
+}
+
+/* Checkbox */
+.check-btn {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(212,168,67,0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: transparent;
+  transition: all 0.2s;
+  background: transparent;
+}
+
+.check-btn.done {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-tag">Plano de Conteúdo · Maio 2026</div>
+  <h1 class="hero-title">44<br><span class="accent">VÍDEOS.</span><br>22 DIAS.</h1>
+  <p class="hero-sub">Roteiros validados para viralizar e chegar a 10 mil seguidores.</p>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">44</div>
+      <div class="stat-label">Vídeos prontos</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">2<span class="s-accent">/dia</span></div>
+      <div class="stat-label">Frequência</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">10<span class="s-accent">K</span></div>
+      <div class="stat-label">Meta de seguidores</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">08<span class="s-accent">–30</span></div>
+      <div class="stat-label">Maio 2026</div>
+    </div>
+  </div>
+  <div class="scroll-hint">↓ Ver todos os vídeos</div>
+</section>
+
+<!-- STRATEGY -->
+<section class="strategy">
+  <div class="section-eyebrow">A lógica por trás</div>
+  <div class="section-title">FÓRMULA DOS<br><em>vídeos que viralizam</em></div>
+  <div class="strategy-grid">
+    <div class="strat-card">
+      <div class="strat-icon">🎯</div>
+      <div class="strat-title">GANCHO FORTE</div>
+      <div class="strat-text">Os primeiros <strong>2 segundos</strong> definem tudo. Começa com uma afirmação que provoca, contradiz ou incomoda. O algoritmo mede retenção nos primeiros 3s — se a pessoa ficar, ele distribui.</div>
+    </div>
+    <div class="strat-card">
+      <div class="strat-icon">⚡</div>
+      <div class="strat-title">VERDADE INCÔMODA</div>
+      <div class="strat-text">Vídeos que falam o que <strong>ninguém quer ouvir</strong> geram compartilhamento. Quando a pessoa pensa "isso sou eu" ou "preciso mandar pro meu amigo" — o algoritmo explode.</div>
+    </div>
+    <div class="strat-card">
+      <div class="strat-icon">🔁</div>
+      <div class="strat-title">CTA QUE CONVERTE</div>
+      <div class="strat-text">Todo vídeo tem <strong>um único CTA</strong>: salva, comenta ou segue. Nunca os três. O CTA certo no momento certo transforma alcance em seguidor.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDAR -->
+<section class="calendar">
+
+<!-- SEMANA 1 -->
+<div class="week-block">
+  <div class="week-header">
+    <div class="week-num">01</div>
+    <div class="week-info">
+      <div class="week-title">SEMANA 1 — CHOCAR E ATRAIR</div>
+      <div class="week-dates">08 – 11 de Maio</div>
+    </div>
+    <div class="week-theme">Quebra de crenças · Identificação</div>
+  </div>
+
+  <!-- DIA 8 -->
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 1 · 08/05 · Vídeo 1</div><div class="card-num">01</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span><span class="badge badge-hook">Gancho forte</span></div>
+      <div class="card-gancho">"Você não é preguiçoso. Você está com medo de parecer idiota na internet."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Gancho (0–2s):</strong> Olha direto pra câmera, fala a frase sem introdução.<br>
+        <strong>Desenvolvimento:</strong> "Todo mundo fala que é preguiça. Não é. É vergonha. Medo de postar e ninguém assistir. Medo de postar e alguém zoar. Isso não é preguiça — é insegurança disfarçada."<br>
+        <strong>Virada:</strong> "E o pior? Enquanto você fica travado, alguém com metade do seu talento está postando todo dia e crescendo."<br>
+        <strong>CTA:</strong> "Comenta aqui: quanto tempo você ficou sem postar por causa disso?"
+      </div>
+      <div class="card-cta">CTA → COMENTÁRIO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 1 · 08/05 · Vídeo 2</div><div class="card-num">02</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Verdade crua</span></div>
+      <div class="card-gancho">"A maioria das pessoas não te ignora porque seu conteúdo é ruim. Te ignora porque você não existe."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Gancho (0–2s):</strong> Fala olhando pro lado, como se fosse um desabafo.<br>
+        <strong>Desenvolvimento:</strong> "Você não posta. Então pra quem está no Instagram, você não existe. Simples assim. Não tem algoritmo que te salve se você não aparece."<br>
+        <strong>Virada:</strong> "A única diferença entre você e quem tem 50 mil seguidores é que eles apareceram quando você não apareceu."<br>
+        <strong>CTA:</strong> "Me segue — posto todo dia o que eles não te contam sobre criar conteúdo."
+      </div>
+      <div class="card-cta">CTA → FOLLOW</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <!-- DIA 9 -->
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 2 · 09/05 · Vídeo 3</div><div class="card-num">03</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span></div>
+      <div class="card-gancho">"Se o seu vídeo começa com 'oi gente, tudo bem?' — você já perdeu."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Gancho (0–2s):</strong> Começa falando a frase enquanto caminha ou está no computador.<br>
+        <strong>Desenvolvimento:</strong> "Você tem 2 segundos. Dois. O algoritmo já decidiu se vai distribuir seu vídeo antes de você acabar de falar 'tudo bem'. Use esses 2 segundos para dizer algo que faça a pessoa parar o dedo."<br>
+        <strong>Exemplos:</strong> Mostra 3 exemplos de ganchos ruins vs bons.<br>
+        <strong>CTA:</strong> "Salva esse vídeo e reescreve o gancho do seu próximo post."
+      </div>
+      <div class="card-cta">CTA → SALVAR</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 2 · 09/05 · Vídeo 4</div><div class="card-num">04</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Identificação</span></div>
+      <div class="card-gancho">"Você já gravou um vídeo, assistiu, odiou e deletou? Então você sabe exatamente o que está te travando."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Gancho:</strong> Pergunta direto, olho no olho.<br>
+        <strong>Desenvolvimento:</strong> "Você não deletou porque estava ruim. Deletou porque estava com medo. Medo do que iam achar. Esse medo tem nome: é o ego te protegendo. E ele está destruindo sua carreira na internet."<br>
+        <strong>Virada:</strong> "O vídeo que você deletou provavelmente era melhor do que 80% do que está no feed hoje."<br>
+        <strong>CTA:</strong> "Comenta quantos vídeos você já deletou antes de postar."
+      </div>
+      <div class="card-cta">CTA → COMENTÁRIO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <!-- DIA 10 -->
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 3 · 10/05 · Vídeo 5</div><div class="card-num">05</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span><span class="badge badge-hook">Compartilhável</span></div>
+      <div class="card-gancho">"3 tipos de pessoa que nunca vão crescer na internet — independente de quantos cursos fizerem."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Formato:</strong> Lista rápida, um tipo por corte.<br>
+        <strong>Tipo 1:</strong> "Quem espera estar pronto. Pronto não existe."<br>
+        <strong>Tipo 2:</strong> "Quem posta uma vez por semana e acha que o algoritmo vai lembrar deles."<br>
+        <strong>Tipo 3:</strong> "Quem compara o começo deles com o meio de outra pessoa."<br>
+        <strong>CTA:</strong> "Marca aqui embaixo quem você conhece que é um desses três."
+      </div>
+      <div class="card-cta">CTA → MARCAR AMIGO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 3 · 10/05 · Vídeo 6</div><div class="card-num">06</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Bastidores</span></div>
+      <div class="card-gancho">"Quanto eu faturei no mês passado trabalhando com a internet — e o que ninguém te mostra."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Gancho:</strong> Fala o número real (ou uma faixa honesta).<br>
+        <strong>Desenvolvimento:</strong> Mostra o que veio de onde — consultoria, conteúdo, indicação. Fala quanto de esforço real foi.<br>
+        <strong>Verdade:</strong> "Não foi glamour. Foi consistência em dias que eu não queria aparecer."<br>
+        <strong>CTA:</strong> "Me segue — todo mês posto os bastidores reais."
+      </div>
+      <div class="card-cta">CTA → FOLLOW</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <!-- DIA 11 -->
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 4 · 11/05 · Vídeo 7</div><div class="card-num">07</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span></div>
+      <div class="card-gancho">"Ninguém te falou isso: a câmera do seu celular é boa o suficiente. O problema não é o equipamento."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Gancho:</strong> Mostra o celular na mão enquanto fala.<br>
+        <strong>Desenvolvimento:</strong> "As pessoas que têm câmera cara e não crescem são mais do que as que têm celular simples e cresceram muito. O que diferencia não é equipamento — é o que você fala e como você fala."<br>
+        <strong>Virada:</strong> "Esse vídeo foi gravado no mesmo celular que está no seu bolso agora."<br>
+        <strong>CTA:</strong> "Salva e para de usar equipamento como desculpa."
+      </div>
+      <div class="card-cta">CTA → SALVAR</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 4 · 11/05 · Vídeo 8</div><div class="card-num">08</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Método</span></div>
+      <div class="card-gancho">"Como eu crio conteúdo todos os dias sem ficar sem ideia — em 3 passos."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Passo 1:</strong> "Toda dúvida que alguém me manda no direct vira um vídeo."<br>
+        <strong>Passo 2:</strong> "Todo erro que eu cometi vira um vídeo."<br>
+        <strong>Passo 3:</strong> "Todo conteúdo que consumo — livro, podcast, vídeo — minha opinião sobre ele vira um vídeo."<br>
+        <strong>CTA:</strong> "Salva esse vídeo. Você nunca mais vai ficar sem pauta."
+      </div>
+      <div class="card-cta">CTA → SALVAR</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+</div>
+
+<!-- SEMANA 2 -->
+<div class="week-block">
+  <div class="week-header">
+    <div class="week-num">02</div>
+    <div class="week-info">
+      <div class="week-title">SEMANA 2 — ENSINAR E PROVOCAR</div>
+      <div class="week-dates">12 – 16 de Maio</div>
+    </div>
+    <div class="week-theme">Valor prático · Autoridade</div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 5 · 12/05 · Vídeo 9</div><div class="card-num">09</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span></div>
+      <div class="card-gancho">"O algoritmo não te odeia. Você está postando a coisa errada para as pessoas erradas."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Desenvolvimento:</strong> "O algoritmo é simples: ele mostra seu vídeo pra 100 pessoas. Se 30 assistem até o fim, ele mostra pra mais 1000. Se 5 assistem, ele para. O problema não é o algoritmo — é a retenção."<br>
+        <strong>Solução:</strong> "Gancho forte nos primeiros 2s + entrega rápida do que prometeu = retenção alta."<br>
+        <strong>CTA:</strong> "Salva esse vídeo e revê o gancho dos seus últimos 3 posts."
+      </div>
+      <div class="card-cta">CTA → SALVAR</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 5 · 12/05 · Vídeo 10</div><div class="card-num">10</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Dia a dia real</span></div>
+      <div class="card-gancho">"Um dia na minha vida trabalhando com marketing digital — a versão real, sem filtro."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Formato:</strong> Vlog rápido, cortes dinâmicos do dia real.<br>
+        <strong>Mostra:</strong> Reunião com cliente, gravação de conteúdo, mensagem difícil, momento de dúvida e momento de resultado.<br>
+        <strong>Narração:</strong> "Ninguém posta a reunião que não foi bem. Eu posto."<br>
+        <strong>CTA:</strong> "Me segue se você quer ver os bastidores reais."
+      </div>
+      <div class="card-cta">CTA → FOLLOW</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 6 · 13/05 · Vídeo 11</div><div class="card-num">11</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span><span class="badge badge-hook">Compartilhável</span></div>
+      <div class="card-gancho">"5 coisas que eu faria diferente se começasse do zero hoje no marketing digital."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>1:</strong> Escolheria um nicho específico logo de cara.<br>
+        <strong>2:</strong> Pararia de tentar ser perfeito e postaria todos os dias desde o primeiro.<br>
+        <strong>3:</strong> Teria arrumado um cliente nos primeiros 30 dias, nem que fosse de graça, pra ter prova social.<br>
+        <strong>4:</strong> Estudaria vendas antes de estudar tráfego.<br>
+        <strong>5:</strong> Pararia de comparar meu começo com o meio de quem já estava há 2 anos.<br>
+        <strong>CTA:</strong> "Qual dessas você mais precisava ouvir? Comenta o número."
+      </div>
+      <div class="card-cta">CTA → COMENTÁRIO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 6 · 13/05 · Vídeo 12</div><div class="card-num">12</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Objeção</span></div>
+      <div class="card-gancho">"Você acha que precisa de 10 mil seguidores pra ganhar dinheiro. Está errado."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Desenvolvimento:</strong> "Eu tenho clientes que faturam mais do que perfis com 100 mil seguidores. Sabe o que eles têm que esses não têm? Um público pequeno e muito específico que confia neles."<br>
+        <strong>Dado:</strong> "1.000 seguidores certos valem mais que 100 mil aleatórios."<br>
+        <strong>CTA:</strong> "Me segue — aqui você aprende a crescer certo, não só crescer."
+      </div>
+      <div class="card-cta">CTA → FOLLOW</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 7 · 14/05 · Vídeo 13</div><div class="card-num">13</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span></div>
+      <div class="card-gancho">"Vou te mostrar o roteiro exato que uso nos meus vídeos que mais engajam."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Formato:</strong> Tela com texto mostrando a estrutura enquanto narra.<br>
+        <strong>Estrutura:</strong> "Gancho (provoca) → Problema (nomeia a dor) → Virada (solução inesperada) → CTA (uma ação só)."<br>
+        <strong>Exemplo ao vivo:</strong> Aplica a estrutura num tema do nicho em tempo real.<br>
+        <strong>CTA:</strong> "Salva esse vídeo e usa essa estrutura no seu próximo post."
+      </div>
+      <div class="card-cta">CTA → SALVAR</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 7 · 14/05 · Vídeo 14</div><div class="card-num">14</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Provocação</span></div>
+      <div class="card-gancho">"Seu problema não é falta de conteúdo. É excesso de autocrítica."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Desenvolvimento:</strong> "Você tem mil ideias por dia. O problema é que você as mata antes de gravar. 'Isso é óbvio demais.' 'Isso já foi feito.' 'Ninguém vai querer ver isso.' Cada um desses pensamentos é um vídeo morto."<br>
+        <strong>Virada:</strong> "Óbvio pra você é novidade pra quem está começando agora."<br>
+        <strong>CTA:</strong> "Grava o próximo vídeo sem assistir antes de postar."
+      </div>
+      <div class="card-cta">CTA → DESAFIO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 8 · 15/05 · Vídeo 15</div><div class="card-num">15</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span><span class="badge badge-hook">Tendência</span></div>
+      <div class="card-gancho">"POV: você finalmente postou o vídeo que ficou 3 semanas no rascunho."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Formato:</strong> Storytelling curto, tom bem-humorado.<br>
+        <strong>Cena 1:</strong> "Segunda: 'vou gravar hoje.' Não gravou."<br>
+        <strong>Cena 2:</strong> "Quarta: 'amanhã com certeza.' Não gravou."<br>
+        <strong>Cena 3:</strong> "Sábado: gravou, assistiu, odiou, deletou."<br>
+        <strong>Cena 4:</strong> "Domingo: gravou sem pensar, postou, 50 mil views."<br>
+        <strong>CTA:</strong> "Marca aqui o seu eu de segunda-feira."
+      </div>
+      <div class="card-cta">CTA → MARCAR AMIGO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 8 · 15/05 · Vídeo 16</div><div class="card-num">16</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Educativo</span></div>
+      <div class="card-gancho">"A diferença entre quem ganha dinheiro com conteúdo e quem não ganha — em 60 segundos."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Quem não ganha:</strong> Cria conteúdo aleatório, sem audiência definida, sem oferta clara, espera as coisas acontecerem.<br>
+        <strong>Quem ganha:</strong> Fala pra uma pessoa específica, tem um problema específico pra resolver, faz CTA toda semana, transforma conteúdo em conversa.<br>
+        <strong>CTA:</strong> "Qual dos dois você está sendo agora? Comenta."
+      </div>
+      <div class="card-cta">CTA → COMENTÁRIO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 9 · 16/05 · Vídeo 17</div><div class="card-num">17</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span></div>
+      <div class="card-gancho">"Respondi 60 mensagens de pessoas interessadas no meu serviço. Zero fechou. Aprendi isso."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Gancho:</strong> Tom de confissão, vulnerável.<br>
+        <strong>O que aprendi:</strong> "Tráfego sem processo de venda é dinheiro jogado fora. Não adianta ter interesse se você não sabe converter."<br>
+        <strong>O que mudei:</strong> Mostra o script de vendas que passou a usar.<br>
+        <strong>CTA:</strong> "Me segue — semana que vem posto o script completo."
+      </div>
+      <div class="card-cta">CTA → FOLLOW + EXPECTATIVA</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 9 · 16/05 · Vídeo 18</div><div class="card-num">18</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Dica rápida</span></div>
+      <div class="card-gancho">"O horário em que você posta importa menos do que você pensa. Isso importa mais."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Desenvolvimento:</strong> "Pessoal obcecado com horário de postagem enquanto o gancho do vídeo está fraco. O algoritmo distribui vídeo bom em qualquer horário. Distribui vídeo ruim em nenhum horário."<br>
+        <strong>O que importa mais:</strong> Gancho, retenção e CTA claro.<br>
+        <strong>CTA:</strong> "Salva esse vídeo e para de otimizar o que não importa."
+      </div>
+      <div class="card-cta">CTA → SALVAR</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+</div>
+
+<!-- SEMANA 3 -->
+<div class="week-block">
+  <div class="week-header">
+    <div class="week-num">03</div>
+    <div class="week-info">
+      <div class="week-title">SEMANA 3 — APROFUNDAR E CONVERTER</div>
+      <div class="week-dates">17 – 23 de Maio</div>
+    </div>
+    <div class="week-theme">Confiança · Prova social</div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 10 · 17/05 · Vídeo 19</div><div class="card-num">19</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span></div>
+      <div class="card-gancho">"Como eu consegui meu primeiro cliente de marketing digital sem ter seguidores."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>História real:</strong> Conta como foi o primeiro cliente — abordagem, proposta, valor cobrado.<br>
+        <strong>O que funcionou:</strong> "Não foi meu perfil que convenceu. Foi minha proposta específica pro problema específico dele."<br>
+        <strong>Lição:</strong> "Você não precisa de audiência pra começar. Precisa de uma oferta clara."<br>
+        <strong>CTA:</strong> "Me segue — semana que vem posto a estrutura da proposta que usei."
+      </div>
+      <div class="card-cta">CTA → FOLLOW + EXPECTATIVA</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 10 · 17/05 · Vídeo 20</div><div class="card-num">20</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Listagem viral</span></div>
+      <div class="card-gancho">"7 erros que impedem você de crescer no Instagram — e todo mundo comete."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Formato:</strong> Lista rápida, um erro por corte.<br>
+        <strong>Erros:</strong> Postar sem frequência / Começar o vídeo se apresentando / Não ter CTA / Copiar ao invés de adaptar / Não responder comentários / Tentar agradar todo mundo / Desistir depois de 2 semanas.<br>
+        <strong>CTA:</strong> "Salva e me diz: qual número você está cometendo?"
+      </div>
+      <div class="card-cta">CTA → SALVAR + COMENTÁRIO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 11 · 19/05 · Vídeo 21</div><div class="card-num">21</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span><span class="badge badge-hook">Polêmico</span></div>
+      <div class="card-gancho">"Curso de marketing digital não te ensina a ganhar dinheiro. Te ensina a comprar mais curso."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Atenção:</strong> Tom provocativo mas fundamentado — não genérico.<br>
+        <strong>Desenvolvimento:</strong> "Não estou falando que curso é lixo. Estou dizendo que a maioria das pessoas usa curso como substituto pra ação. 'Quando eu terminar esse módulo eu começo.' Esse módulo nunca termina."<br>
+        <strong>Virada:</strong> "O aprendizado que mais avançou minha carreira foi pegar um cliente real antes de me sentir pronto."<br>
+        <strong>CTA:</strong> "Concorda ou discorda? Comenta aqui."
+      </div>
+      <div class="card-cta">CTA → DEBATE</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 11 · 19/05 · Vídeo 22</div><div class="card-num">22</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Resultado</span></div>
+      <div class="card-gancho">"O que aconteceu quando postei todo dia por 30 dias — dados reais."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Dados:</strong> Mostra print dos números (alcance, seguidores, mensagens) comparando antes e depois.<br>
+        <strong>Honestidade:</strong> "Não foi linear. Teve semana que não cresceu quase nada. Depois explodiu."<br>
+        <strong>Lição:</strong> "Consistência não tem resultado imediato. Tem resultado composto."<br>
+        <strong>CTA:</strong> "Me segue se você quer ver o próximo update em 30 dias."
+      </div>
+      <div class="card-cta">CTA → FOLLOW</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 12 · 20/05 · Vídeo 23</div><div class="card-num">23</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span></div>
+      <div class="card-gancho">"Se você tem menos de 5 mil seguidores, para de fazer isso agora."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>O que parar:</strong> "Ficar obcecado com estética do feed / Fazer stories sem vídeo / Esperar o 'momento certo' / Postar sem gancho / Usar 30 hashtags."<br>
+        <strong>O que fazer em vez disso:</strong> "Reels todo dia. Gancho forte. Responde todos os comentários. Aparece todo dia."<br>
+        <strong>CTA:</strong> "Salva esse vídeo e lista o que você vai parar de fazer hoje."
+      </div>
+      <div class="card-cta">CTA → SALVAR</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 12 · 20/05 · Vídeo 24</div><div class="card-num">24</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Vulnerável</span></div>
+      <div class="card-gancho">"O dia em que eu quis desistir de tudo — e o que me fez continuar."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>História:</strong> Conta um momento real de dúvida — vídeo que não performou, cliente que sumiu, semana ruim.<br>
+        <strong>O que mudou:</strong> Uma mensagem, um resultado pequeno, uma conversa.<br>
+        <strong>Mensagem:</strong> "O algoritmo não viu você desistindo. Ele viu você postando de novo no dia seguinte."<br>
+        <strong>CTA:</strong> "Me conta uma vez que você quis desistir mas continuou."
+      </div>
+      <div class="card-cta">CTA → COMENTÁRIO PESSOAL</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 13 · 21/05 · Vídeo 25</div><div class="card-num">25</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span></div>
+      <div class="card-gancho">"Quanto tempo leva pra crescer no Instagram — a resposta honesta que ninguém dá."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Honestidade:</strong> "Não é 30 dias. Não é 90. É até você entender o que funciona pro seu público — e isso leva tempo diferente pra cada pessoa."<br>
+        <strong>Mas:</strong> "Tem um padrão. Quem posta todo dia por 6 meses e melhora o conteúdo baseado nos dados — cresce. Sem exceção."<br>
+        <strong>CTA:</strong> "Você está no começo ou no meio da jornada? Comenta."
+      </div>
+      <div class="card-cta">CTA → COMENTÁRIO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 13 · 21/05 · Vídeo 26</div><div class="card-num">26</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Tutorial</span></div>
+      <div class="card-gancho">"Como escrever um gancho que faz as pessoas pararem o dedo — método em 3 perguntas."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Pergunta 1:</strong> "Isso provoca emoção? (medo, curiosidade, indignação, identificação)"<br>
+        <strong>Pergunta 2:</strong> "Isso promete algo específico que eu vou entregar nos próximos 60 segundos?"<br>
+        <strong>Pergunta 3:</strong> "Isso fala com UMA pessoa específica, não com todo mundo?"<br>
+        <strong>CTA:</strong> "Salva e usa essas 3 perguntas antes de gravar qualquer vídeo."
+      </div>
+      <div class="card-cta">CTA → SALVAR</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 14 · 22/05 · Vídeo 27</div><div class="card-num">27</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span><span class="badge badge-hook">Polêmico</span></div>
+      <div class="card-gancho">"Stories não crescem perfil. Para de perder tempo lá e faz isso."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Argumento:</strong> "Stories é pra quem já te conhece. Reels é pra quem ainda não te conhece. Se você quer crescer, precisa de alcance. Alcance vem de reels, não de stories."<br>
+        <strong>Uso correto de stories:</strong> "Stories é pra converter quem já te segue — mostrar bastidores, fazer CTA pra consultoria, humanizar."<br>
+        <strong>CTA:</strong> "Concorda? Discorda? Comenta aqui."
+      </div>
+      <div class="card-cta">CTA → DEBATE</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 14 · 22/05 · Vídeo 28</div><div class="card-num">28</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Caso real</span></div>
+      <div class="card-gancho">"Analisei o Instagram de um cliente que não conseguia fechar ninguém. Encontrei isso."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Caso:</strong> Descreve o perfil (sem citar nome) — bom conteúdo, mas bio genérica, sem CTA nos vídeos, postava irregularmente.<br>
+        <strong>O que mudou:</strong> Bio específica, CTA em todo vídeo, frequência de 5x por semana.<br>
+        <strong>Resultado:</strong> Menciona a melhora depois de 30 dias.<br>
+        <strong>CTA:</strong> "Quer uma análise do seu perfil? Me chama no direct."
+      </div>
+      <div class="card-cta">CTA → DIRECT (CONSULTORIA)</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 15 · 23/05 · Vídeo 29</div><div class="card-num">29</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span></div>
+      <div class="card-gancho">"Você não precisa de nicho perfeito. Precisa de consistência imperfeita."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Desenvolvimento:</strong> "As pessoas ficam meses escolhendo nicho enquanto quem escolheu 'errado' e postou todo dia está em 50 mil seguidores. Nicho ruim com consistência bate nicho perfeito com paralisia."<br>
+        <strong>Virada:</strong> "Você ajusta o nicho no caminho. Você não ajusta o tempo perdido esperando."<br>
+        <strong>CTA:</strong> "Você ainda está na fase de 'escolher o nicho'? Comenta aqui."
+      </div>
+      <div class="card-cta">CTA → COMENTÁRIO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 15 · 23/05 · Vídeo 30</div><div class="card-num">30</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Financeiro</span></div>
+      <div class="card-gancho">"Quanto cobra um gestor de tráfego iniciante — a tabela real que ninguém mostra."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Formato:</strong> Mostra faixas reais por nível de experiência e tipo de serviço.<br>
+        <strong>Iniciante:</strong> R$ 500–800/mês por cliente.<br>
+        <strong>Intermediário:</strong> R$ 1.200–2.500/mês.<br>
+        <strong>Avançado:</strong> R$ 3.000–6.000+/mês ou % do investimento.<br>
+        <strong>CTA:</strong> "Salva esse vídeo e para de cobrar barato por medo."
+      </div>
+      <div class="card-cta">CTA → SALVAR</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+</div>
+
+<!-- SEMANA 4 -->
+<div class="week-block">
+  <div class="week-header">
+    <div class="week-num">04</div>
+    <div class="week-info">
+      <div class="week-title">SEMANA 4 — FECHAR FORTE</div>
+      <div class="week-dates">24 – 30 de Maio</div>
+    </div>
+    <div class="week-theme">Autoridade máxima · Viralização final</div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 16 · 24/05 · Vídeo 31</div><div class="card-num">31</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span></div>
+      <div class="card-gancho">"Esse vídeo vai chegar pra quem precisa ouvir isso: para de se comparar com quem grava há 5 anos."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Desenvolvimento:</strong> "Você está no mês 3. Eles estão no ano 4. A comparação não faz sentido matemático. Você está comparando resultados de investimentos com horizontes de tempo completamente diferentes."<br>
+        <strong>Virada:</strong> "A única comparação válida é: você hoje vs você há 30 dias."<br>
+        <strong>CTA:</strong> "Marca aqui quem precisa ouvir isso."
+      </div>
+      <div class="card-cta">CTA → MARCAR AMIGO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 16 · 24/05 · Vídeo 32</div><div class="card-num">32</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Método</span></div>
+      <div class="card-gancho">"Minha rotina de criação de conteúdo — como gravo 10 vídeos em 2 horas."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Passo 1:</strong> "Uma hora por semana só pra pautar — lista 10+ ideias sem filtrar."<br>
+        <strong>Passo 2:</strong> "Um bloco de gravação — mesmo cenário, troco roupa se precisar."<br>
+        <strong>Passo 3:</strong> "Edição rápida — corta os silêncios, coloca legenda, sobe."<br>
+        <strong>Resultado:</strong> "2 horas de gravação = conteúdo da semana inteira."<br>
+        <strong>CTA:</strong> "Salva esse vídeo e testa essa semana."
+      </div>
+      <div class="card-cta">CTA → SALVAR</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 17 · 26/05 · Vídeo 33</div><div class="card-num">33</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span><span class="badge badge-hook">Compartilhável</span></div>
+      <div class="card-gancho">"A frase que mais ouço de quem quer trabalhar com internet mas não trabalha: 'quando eu estiver pronto.'"</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Desenvolvimento:</strong> "'Quando eu aprender mais.' 'Quando eu tiver uma câmera melhor.' 'Quando eu montar um escritório.' Isso não é preparo. É procrastinação com nome bonito."<br>
+        <strong>Virada:</strong> "Pronto não é um estado. É uma decisão."<br>
+        <strong>Encerramento:</strong> Tom direto: "Você nunca vai estar 100% pronto. E está tudo bem. Começa assim mesmo."<br>
+        <strong>CTA:</strong> "Comenta: o que está esperando pra começar?"
+      </div>
+      <div class="card-cta">CTA → COMENTÁRIO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 17 · 26/05 · Vídeo 34</div><div class="card-num">34</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Autoridade</span></div>
+      <div class="card-gancho">"O que eu aprendi gerenciando perfis de clientes que nenhum curso me ensinou."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Lição 1:</strong> "Cliente não quer resultado — quer sentir que você está no controle."<br>
+        <strong>Lição 2:</strong> "Relatório bonito não substitui conversa direta sobre o que não está funcionando."<br>
+        <strong>Lição 3:</strong> "O cliente que mais dá trabalho raramente é o mais lucrativo."<br>
+        <strong>Lição 4:</strong> "Educação do cliente é parte do serviço — se ele não entende o processo, ele vai te questionar tudo."<br>
+        <strong>CTA:</strong> "Me segue — toda semana trago bastidores reais de agência."
+      </div>
+      <div class="card-cta">CTA → FOLLOW</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 18 · 27/05 · Vídeo 35</div><div class="card-num">35</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span></div>
+      <div class="card-gancho">"Conteúdo publicado ontem bate conteúdo perfeito que nunca saiu. Sempre."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Desenvolvimento:</strong> "Você não é julgado pelo vídeo que não postou. Você é ignorado por ele."<br>
+        <strong>Dado real:</strong> "Os vídeos que mais cresceram no meu perfil não foram os que eu mais gostei. Foram os que eu menos editei."<br>
+        <strong>Virada:</strong> "A audiência não vai te dar nota. Ela vai ficar ou sair. E ela só pode fazer isso se você aparecer."<br>
+        <strong>CTA:</strong> "Salva esse vídeo pra quando você travar antes de postar."
+      </div>
+      <div class="card-cta">CTA → SALVAR</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 18 · 27/05 · Vídeo 36</div><div class="card-num">36</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Direto ao ponto</span></div>
+      <div class="card-gancho">"O que fazer nos primeiros 90 dias se você quer trabalhar com marketing digital."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Mês 1:</strong> "Escolhe um serviço. Aprende o básico. Pega um cliente, mesmo que de graça, pra ter resultado real."<br>
+        <strong>Mês 2:</strong> "Começa a documentar tudo — o que aprendeu, os resultados do cliente, os erros. Isso vira conteúdo."<br>
+        <strong>Mês 3:</strong> "Já tem prova social. Agora cobra. E aumenta a frequência de conteúdo."<br>
+        <strong>CTA:</strong> "Me segue — em qual mês você está agora?"
+      </div>
+      <div class="card-cta">CTA → COMENTÁRIO + FOLLOW</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 19 · 28/05 · Vídeo 37</div><div class="card-num">37</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span><span class="badge badge-hook">Polêmico</span></div>
+      <div class="card-gancho">"Trabalhar de casa não é pra todo mundo. E tudo bem admitir isso."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Desenvolvimento:</strong> "A internet te vendeu o sonho do 'trabalha de pijama, 4 horas por dia, na praia.' Isso existe. Só que antes desse ponto vêm 2 anos de disciplina sem ninguém te cobrando, sem salário fixo, sem estrutura."<br>
+        <strong>Verdade:</strong> "Quem não consegue se organizar sem chefe vai sofrer mais trabalhando por conta."<br>
+        <strong>Mas:</strong> "Isso também se aprende. Se você quer aprender, me segue."<br>
+        <strong>CTA:</strong> "Você prefere CLT ou empreender? Comenta sem julgamento."
+      </div>
+      <div class="card-cta">CTA → DEBATE</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 19 · 28/05 · Vídeo 38</div><div class="card-num">38</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Resultado</span></div>
+      <div class="card-gancho">"Update de 22 dias postando todo dia: o que mudou no meu perfil."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Formato:</strong> Vídeo de update real — mostra os números do perfil.<br>
+        <strong>O que cresceu:</strong> Seguidores, alcance, mensagens no direct.<br>
+        <strong>O que não funcionou:</strong> Honestidade sobre vídeos que não performaram.<br>
+        <strong>Aprendizado:</strong> O que você vai fazer diferente no próximo mês.<br>
+        <strong>CTA:</strong> "Me segue pra acompanhar o próximo mês."
+      </div>
+      <div class="card-cta">CTA → FOLLOW + EXPECTATIVA</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 20 · 29/05 · Vídeo 39</div><div class="card-num">39</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span></div>
+      <div class="card-gancho">"O vídeo que não performou me ensinou mais do que o que viralizou."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Desenvolvimento:</strong> "Quando um vídeo explode você celebra e tenta repetir. Quando um vídeo não performa, você tem dados. Sabe o que não funciona pro seu público. Isso vale mais."<br>
+        <strong>Processo:</strong> "Pego os 3 vídeos que menos funcionaram no mês e analiso: gancho fraco? Tema errado? CTA ruim?"<br>
+        <strong>CTA:</strong> "Você analisa seus vídeos que não performam? Comenta."
+      </div>
+      <div class="card-cta">CTA → COMENTÁRIO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Dia 20 · 29/05 · Vídeo 40</div><div class="card-num">40</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Motivacional</span></div>
+      <div class="card-gancho">"Em algum lugar agora tem uma pessoa que precisa ver um conteúdo que só você pode fazer."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Desenvolvimento:</strong> "Não porque você é especial. Porque você viveu o que viveu. Tem a perspectiva que tem. Está no lugar em que está."<br>
+        <strong>Virada:</strong> "Quando você não posta, essa pessoa não encontra a resposta que precisava."<br>
+        <strong>Encerramento:</strong> Tom suave, olho no olho: "Isso não é obrigação. É oportunidade."<br>
+        <strong>CTA:</strong> "Salva esse vídeo pra quando você pensar que não tem nada pra falar."
+      </div>
+      <div class="card-cta">CTA → SALVAR</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <div class="day-row">
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 21 · 30/05 · Vídeo 41</div><div class="card-num">41</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span><span class="badge badge-hook">Encerramento forte</span></div>
+      <div class="card-gancho">"Um mês atrás eu tinha X seguidores. Hoje tenho Y. O que fiz diferente — resumo completo."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Formato:</strong> Vídeo de encerramento do mês — os números reais.<br>
+        <strong>O que funcionou:</strong> Top 3 ações que mais moveram o ponteiro.<br>
+        <strong>O que não funcionou:</strong> Honestidade sobre o que não deu resultado.<br>
+        <strong>Próximo mês:</strong> O que você vai testar em junho.<br>
+        <strong>CTA:</strong> "Me segue pra acompanhar junho do zero."
+      </div>
+      <div class="card-cta">CTA → FOLLOW + EXPECTATIVA JUNHO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card viral">
+      <div class="fire-badge">🔥</div>
+      <div class="card-top"><div class="card-day">Dia 21 · 30/05 · Vídeo 42</div><div class="card-num">42</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-viral">Alto viral</span></div>
+      <div class="card-gancho">"Se você assistiu meus vídeos esse mês e ainda não me segue — esse vídeo é pra você."</div>
+      <div class="card-roteiro-label">Roteiro</div>
+      <div class="card-roteiro">
+        <strong>Tom:</strong> Bem-humorado, direto.<br>
+        <strong>Desenvolvimento:</strong> "Você já viu bastante conteúdo aqui. Sabe o que eu falo, como eu falo, se faz sentido pra você. A única decisão que falta é apertar o botão de seguir."<br>
+        <strong>O que vem:</strong> "Em junho: [promete 2 séries de conteúdo específicas]. Se isso faz sentido pra você, aperta agora."<br>
+        <strong>CTA:</strong> "Me segue e comenta 'junho' se tiver dentro."
+      </div>
+      <div class="card-cta">CTA → FOLLOW DIRETO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+
+  <!-- BÔNUS -->
+  <div class="day-row" style="margin-top:24px">
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Bônus · Vídeo 43</div><div class="card-num">43</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Reaproveitamento</span></div>
+      <div class="card-gancho">Pega o vídeo de maior engajamento do mês e regrava com gancho diferente.</div>
+      <div class="card-roteiro-label">Estratégia</div>
+      <div class="card-roteiro">
+        <strong>Método:</strong> Identifica o vídeo com mais comentários/salvamentos. Regrava o mesmo tema com um ângulo diferente no gancho. Conteúdo já validado = menor risco, alto potencial.<br>
+        <strong>Exemplo:</strong> Se "3 erros que impedem crescimento" funcionou, regrava como "Por que você comete esses 3 erros mesmo sabendo que são erros."
+      </div>
+      <div class="card-cta">REAPROVEITAMENTO DE CONTEÚDO</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+
+    <div class="video-card">
+      <div class="card-top"><div class="card-day">Bônus · Vídeo 44</div><div class="card-num">44</div></div>
+      <div class="card-badges"><span class="badge badge-format">Reel</span><span class="badge badge-hook">Resposta a comentário</span></div>
+      <div class="card-gancho">Pega o comentário mais frequente do mês e faz um vídeo respondendo diretamente.</div>
+      <div class="card-roteiro-label">Estratégia</div>
+      <div class="card-roteiro">
+        <strong>Método:</strong> "Vários de vocês me perguntaram [X]. Vou responder de vez." — Isso gera identificação em quem perguntou e atrai novos seguidores com a mesma dúvida.<br>
+        <strong>Bônus:</strong> Mostra o comentário na tela enquanto responde — aumenta o engajamento de quem comentou (eles compartilham).
+      </div>
+      <div class="card-cta">CONTEÚDO GERADO PELA AUDIÊNCIA</div>
+      <div class="check-btn" onclick="toggleDone(this)">✓</div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-brand">@PEDRO_MUNARETTO</div>
+  <div class="footer-meta">44 vídeos · Maio 2026 · Meta: 10K seguidores</div>
+</div>
+
+<script>
+// Progress bar
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  document.getElementById('progress').style.width = progress + '%';
+});
+
+// Toggle done
+function toggleDone(btn) {
+  btn.classList.toggle('done');
+  const card = btn.closest('.video-card');
+  if (btn.classList.contains('done')) {
+    card.style.opacity = '0.5';
+    card.style.borderColor = 'rgba(75,174,110,0.2)';
+  } else {
+    card.style.opacity = '1';
+    card.style.borderColor = '';
+  }
+  updateCounter();
+}
+
+function updateCounter() {
+  const done = document.querySelectorAll('.check-btn.done').length;
+  const total = document.querySelectorAll('.check-btn').length;
+  // Could add a counter display here
+}
+
+// Fade in on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.05 });
+
+document.querySelectorAll('.video-card, .week-block').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(16px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
